@@ -1,19 +1,4 @@
-.prev, .next {
-  position: absolute;
-  transform: translateY(-50%);
-  background: transparent;
-  color: #000;
-  border: none;
-  font-size: 2em;
-  padding: 10px 20px;
-  cursor: pointer;
-  z-index: 2;
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}    /* Base Styles */
+	/* Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -54,10 +39,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 60px;
+      padding: 10px 40px;
     }
     .logo {
-      font-size: 1.75em;
+      font-size: 1.85em;
       /* Use Merriweather for the logo (header title) */
       font-family: 'Merriweather', serif;
       font-weight: 400;
@@ -74,6 +59,7 @@
       font-family: 'Lato', sans-serif;
       font-weight: 300;
       color: #fff;
+		font-size: 1.25em;
     }
 	/* Underline Active Page */
 	nav ul li a.active {
@@ -104,7 +90,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      padding: 140px 20px 20px;
+      padding: 160px 20px 20px;
       color: #fff;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
@@ -142,7 +128,7 @@
       flex: 1;
     }
     .intro-text h1 {
-      font-size: 2.5em;
+      font-size: 2.25em;
       margin-bottom: 20px;
 	  font-family: 'Merriweather', serif;
       /* Optionally, you can leave h1 without forcing a font-family */
@@ -170,26 +156,29 @@
       background: #555;
     }
 
-	/* LinkedIn Button */
-	.linkedin-button {
+	/* Social Buttons */
+
+	.linkedin-button, .github-button {
 	  display: inline-flex;
 	  align-items: center;
 	  padding: 0px 0px;
 	  color: #fff;
-	  border-radius: 4px;
-	  transition: background 0.3s;
+	  border-radius: 50%;
+/*	  transition: background 0.3s ease-in-out !important;*/
 	  font-size: 1em;
 	  text-decoration: none;
-	  margin-left: 10px; /* Adds spacing between buttons */
+	  margin-left: 5px; /* Adds spacing between buttons */
 	}
-/*
 	.linkedin-button:hover {
-	  background: #3399cc; 
+	  background: #0077b5; 
 	}
-*/
+	.github-button:hover {
+	  background: linear-gradient(135deg, #3c1e70, #b43cff);
+/*	  background: #3c1e70;*/
+	}
 
-	/* LinkedIn Icon */
-	.linkedin-icon {
+	/* Social Icon */
+	.social-icon {
 	  width: 30px;
 	  height: auto;
 	}
@@ -201,7 +190,7 @@
 		padding-top: 25px;
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		text-align: left;
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 	}
 
 	.publications p {
@@ -217,7 +206,7 @@
 	}
 
 	.publications li {
-		margin-bottom: 5px;
+		margin-bottom: 15px;
 	}
 
 	.publications a {
