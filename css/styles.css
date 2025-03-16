@@ -36,11 +36,12 @@
       padding: 0 20px;
     }
     .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
     }
+
     .logo {
       font-size: 1.85em;
       /* Use Merriweather for the logo (header title) */
@@ -77,9 +78,9 @@
 	}
 
     .menu-toggle {
-      display: none;
-      cursor: pointer;
-      color: #fff;
+    display: none;
+    cursor: pointer;
+    color: #fff;
     }
     
     /* Hero Section with Combined Content */
@@ -304,21 +305,34 @@
         background: #222;
         position: absolute;
         top: 60px;
-        right: 0;
-        width: 200px;
+        right: 20px;
+        width: auto;
         display: none;
       }
       nav ul.active {
         display: block;
       }
       nav ul li {
-        margin: 10px 0;
-        text-align: right;
-        margin-right: 20px;
+        margin: 10px 10px;
+        text-align: left;
       }
       .menu-toggle {
         display: block;
       }
+	  /* Make .nav-container full-width and space out items */
+	  .nav-container {
+		display: flex;               /* ensure it's still flex on mobile */
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;          /* tweak as needed */
+		margin: 0;                   /* remove extra margin if needed */
+	  }
+	  /* .container can simply go 100% wide if you like */
+	  .container {
+		min-width: 100%;
+		margin: 0;
+		padding: 10px 10px 10px 40px;
+	  }
       .hero-content {
         flex-direction: column;
         text-align: center;
