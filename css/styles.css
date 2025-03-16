@@ -1,4 +1,19 @@
-    /* Base Styles */
+.prev, .next {
+  position: absolute;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #000;
+  border: none;
+  font-size: 2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}    /* Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -259,9 +274,9 @@
 	  font-family: 'Lato', sans-serif;
 	}
     /* Slider Arrow Buttons */
+/*
     .prev, .next {
       position: absolute;
-      top: 50%;
       transform: translateY(-50%);
       background: rgba(0,0,0,0.5);
       color: #fff;
@@ -271,6 +286,24 @@
       cursor: pointer;
       z-index: 2;
     }
+  */
+  .prev, .next {
+    position: absolute;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #000;
+    border: none;
+    font-size: 2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
     .prev {
       left: 10px;
     }
