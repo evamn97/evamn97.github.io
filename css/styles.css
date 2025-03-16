@@ -60,7 +60,7 @@
       font-family: 'Lato', sans-serif;
       font-weight: 300;
       color: #fff;
-		font-size: 1.25em;
+	  font-size: 1.25em;
     }
 	/* Underline Active Page */
 	nav ul li a.active {
@@ -72,16 +72,9 @@
 	/* Hover effect: Bold text and underline */
 	nav ul li a:hover {
 	  color: #bbb;
-/*	  font-weight: 700;  Make text bold on hover */
 	  text-decoration: underline;
 	  text-underline-offset: 5px;
 	}
-
-    .menu-toggle {
-    display: none;
-    cursor: pointer;
-    color: #fff;
-    }
     
     /* Hero Section with Combined Content */
     .hero {
@@ -300,30 +293,36 @@
     
     /* Responsive Styles */
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        background: #222;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: auto;
-        display: none;
-      }
+
       nav ul.active {
         display: block;
       }
       nav ul li {
-        margin: 10px 10px;
+        margin: 10px 0px;
         text-align: left;
       }
-      .menu-toggle {
-        display: block;
-      }
+	  nav ul li a {
+	    font-size: 1.1em;
+	  }
+	  /* Hide Active Page on mobile */
+	  nav ul li a.active {
+	    display: none;
+	  }
+	  
+	  .logo {
+		  font-size: 1.5em;
+		  /* Use Merriweather for the logo (header title) */
+/*
+		  font-family: 'Merriweather', serif;
+		  font-weight: 400;
+		  color: #fff;
+*/
+		}
 	  /* Make .nav-container full-width and space out items */
 	  .nav-container {
 		display: flex;               /* ensure it's still flex on mobile */
 		justify-content: space-between;
-		align-items: center;
+		align-items: right;
 		padding: 0;          /* tweak as needed */
 		margin: 0;                   /* remove extra margin if needed */
 	  }
@@ -331,7 +330,7 @@
 	  .container {
 		min-width: 100%;
 		margin: 0;
-		padding: 10px 10px 10px 40px;
+		padding: 10px 30px;
 	  }
       .hero-content {
         flex-direction: column;
