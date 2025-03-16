@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eva Natinsky - Portfolio</title>
+  <!-- Using Merriweather for header and navigation -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet" />
+  <!-- Lato Light for body text -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">Eva Natinsky</div>
+      <div class="menu-toggle">Menu</div>
+      <nav>
+        <ul>
+          <li><a href="home.html" class="active">Resume</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section with Combined Content -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="profile-photo">
+        <img src="images/profile.jpg" alt="Profile Photo">
+      </div>
+      <div class="intro-text">
+        <h1>Welcome to My Portfolio</h1>
+        <p>
+          I am a PhD candidate in Mechanical Engineering at the University of Texas at Austin, currently interning at Sandia National Labs in Albuquerque, NM.
+          My research focuses on developing machine learning-based image processing for optimizing large-area metrology using atomic force microscopes.
+        </p>
+		
+		<div class="button-container">
+			<!-- Resume Button -->	
+			<a href="assets/Natinsky_Resume.pdf" class="resume-link" target="_blank">Download My Resume</a>
+
+			<!-- LinkedIn Button -->
+			<a href="https://www.linkedin.com/in/eva-natinsky-22874513b/" class="linkedin-button" target="_blank">
+				<img src="images/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon">
+			</a>
+		</div>
+		  
+		<!-- Publications Section -->
+		<div class="publications">
+			<p>Check out my recent publications:</p>
+			<ul>
+				<li><a href="https://doi.org/10.1016/j.measurement.2024.114263" target="_blank">Reconstruction of high-resolution atomic force microscopy measurements from fast-scan data using a Noise2Noise algorithm</a></li>
+				<li><a href="https://doi.org/10.1088/1361-6528/ad8165" target="_blank">Three-dimensional visualization of large-area, nanoscale topography measurements</a></li>
+			</ul>
+		</div>
+		  
+      </div>
+    </div>
+  </section>
+    
+  <!-- Slider Photo Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <div class="slider">
+        <div class="slides">
+		<div class="slide">
+			<img src="assets/Natinsky_Resume_Page_1.png" alt="Resume page 1">
+			<span class="slide-counter">1 / 3</span>
+		</div>
+		<div class="slide">
+			<img src="assets/Natinsky_Resume_Page_2.png" alt="Resume page 2">
+			<span class="slide-counter">2 / 3</span>
+		</div>
+		<div class="slide">
+			<img src="assets/Natinsky_Resume_Page_3.png" alt="Resume page 3">
+			<span class="slide-counter">3 / 3</span>
+		</div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Eva Natinsky | eva.natinsky@utexas.edu</p>
+    </div>
+  </footer>
+  
+  <script>
+    // Responsive Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+    });
+  </script>
+	
+  <script>
+  	document.addEventListener("DOMContentLoaded", function () {
+      const slides = document.querySelector(".slides");
+      const slide = document.querySelectorAll(".slide");
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+
+      let counter = 0;
+      const totalSlides = slide.length;
+
+      function updateSlider() {
+          slides.style.transform = `translateX(${-counter * 100}%)`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+          counter = (counter + 1) % totalSlides;
+          updateSlider();
+      });
+
+      prevBtn.addEventListener("click", () => {
+          counter = (counter - 1 + totalSlides) % totalSlides;
+          updateSlider();
+      });
+  });
+</script>
+
+</body>
+</html>

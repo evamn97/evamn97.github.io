@@ -1,0 +1,133 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #222;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #ddd;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* Header & Navigation */
+header {
+  background: #222;
+  border-bottom: 1px solid #444;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.75em;
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  color: #fff;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Main Content */
+main {
+  padding: 140px 20px 60px; /* account for fixed header */
+}
+h1.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Merriweather', serif;
+  color: #fff;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 25px;
+  padding: 0 20px;
+}
+.gallery-item {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+  nav ul.active {
+    display: block;
+  }
+  nav ul li {
+    margin: 10px 0;
+    text-align: right;
+    margin-right: 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
