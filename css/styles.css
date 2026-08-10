@@ -219,7 +219,7 @@ nav ul li a:hover {
 }
 
 .publications li {
-  margin-bottom: 15px;
+  margin-bottom: 6px; /* reduced from 15px */
   max-width: 100%;
 }
 
@@ -232,6 +232,7 @@ nav ul li a:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 100%;
+  line-height: 1.3; /* tighten from inherited 1.6 */
 }
 
 .publications a:hover {
