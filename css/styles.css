@@ -134,6 +134,7 @@ nav ul li a:hover {
 
 .intro-text {
   flex: 1;
+  min-width: 0; /* allow shrinking below content's natural width */
 }
 
 .intro-text h1 {
